@@ -1,3 +1,5 @@
+# Simple Tic-Tac-Toe Game with Java Swing, Login, and Statistics
+
 ## Student Information
 Name : Alya Mutiara Putri
 
@@ -49,7 +51,11 @@ Database used: MySQL
 ## Screenshoot
 <img width="433" height="314" alt="Screenshot 2026-06-26 120355" src="https://github.com/user-attachments/assets/885c3152-87fa-42df-bf1e-a1755d1dff57" />
 
+
+
 <img width="433" height="315" alt="Screenshot 2026-06-26 120409" src="https://github.com/user-attachments/assets/a56f6a56-3beb-4b2f-94a4-5272ff342d65" />
+
+
 
 <img width="428" height="316" alt="Screenshot 2026-06-26 120419" src="https://github.com/user-attachments/assets/f26e10e0-8dbc-4320-b91a-3821c254363c" />
 
