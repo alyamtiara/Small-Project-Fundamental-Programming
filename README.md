@@ -32,19 +32,19 @@ Database used: MySQL
 - Jalankan Main.Java
 
 ## Class Explanation
-- Main:
-- DatabaseManager:
-- Player:
-- PlayerService:
-- GameLogic:
-- LoginFrame:
-- MainMenuFrame:
-- GameFrame:
-- StatisticsFrame:
-- TopScorersFrame:
+- Main: Pusat program saat akan dijalankan dan merupakan kelas yang digunakan untuk mengecek koneksi ke database lalu membuka LoginFrame saat program dijalankan
+- DatabaseManager: Mengelola koneksi JDBC ke MySQL dan menyediakan method getConnection() yang dipanggil setiap kali program butuh akses ke database
+- Player: Menjadi model data pemain yang menyimpan informasi dari tabel database seperti id, username, wins, losses, draws, dan score
+- PlayerService: Menjadi titik dari semua operasi database yang berkaitan dengan pemain, yaitu login() untuk cek username dan password, updateStatistics() untuk memperbarui data setelah game selesai, getPlayerById() untuk mengambil data terbaru, dan getTopFiveScorers() untuk mengambil 5 pemain teratas
+- GameLogic: Berfungsi untuk menjelaskan aturaan permainan Tic-Tac-Toe, kelas ini berisi makeMove() untuk validasi dan eksekusi gerakan, checkWinner() untuk mengecek pemenang, isDraw() untuk mengecek seri, dan computerMove() untuk memilih langkah yang akan dijalankan oleh komputer dengan mengisi kotak yang kosong secara acak
+- LoginFrame: Merupakan jendela pertama yang muncul saat aplikasi dibuka yang nantinya menerima input username dan password, memanggil PlayerService.login(), lalu membuka MainMenuFrame jika berhasil atau menampilkan pesan error jika gagal, dan berisikan UI untuk tampilan Login
+- MainMenuFrame: Merupakan jendela menu utama setelah login berhasil, jendela ini menampilkan salam sambutan dan score pemain, serta tombol navigasi ke GameFrame, StatisticsFrame, TopScorersFrame, dan opsi keluar
+- GameFrame: Jendela permainan utama berisi papan 3×3, yang akan menghubungkan tombol papan dengan GameLogic, menggambar simbol X dan O secara custom, mendeteksi hasil menang/kalah/seri, lalu memanggil PlayerService.updateStatistics() setelah game selesai
+- StatisticsFrame: Jendela yang menampilkan statistik pribadi pemain yang sedang login, jendela ini mengambil data terbaru dari database menggunakan getPlayerById() dan menampilkan wins, losses, draws, score, dan win rate
+- TopScorersFrame: Jendela yang menampilkan 5 pemain dengan score tertinggi dari database menggunakan JTable, pada jendela ini data diambil dari PlayerService.getTopFiveScorers() dan diurutkan berdasarkan score tertinggi, lalu wins terbanyak jika score sama
 
 ## Class Tambahan 
-SoundManager: 
+SoundManager: Memainkan suara menggunakan javax.sound.sampled yang sudah built-in di Java, yang nantinya menghasilkan suara berbeda untuk menang, kalah, seri, dan klik tombol tanpa memerlukan file audio eksternal
 
 ## Screenshoot
 
