@@ -199,7 +199,7 @@ public class GameFrame extends JFrame {
                 String sym = getText();
 
                 if (sym.equals("X")) {
-                    // Gambar X: dua garis silang biru
+                    //gambar X: dua garis silang biru
                     g2.setColor(X_COLOR);
                     g2.setStroke(new BasicStroke(7f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
                     g2.drawLine(pad, pad, w - pad, h - pad);
@@ -212,7 +212,7 @@ public class GameFrame extends JFrame {
                 }
             }
         };
-        btn.setFont(new Font("Arial", Font.BOLD, 1)); // teks disembunyikan, digambar manual
+        btn.setFont(new Font("Arial", Font.BOLD, 1)); 
         btn.setBackground(CELL_COLOR);
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
