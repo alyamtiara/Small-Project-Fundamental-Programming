@@ -49,14 +49,14 @@ public class MainMenuFrame extends JFrame {
         gbc.insets = new Insets(8, 30, 8, 30);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // Salam sambutan
+        //sambutan di bar atas
         JLabel lblHello = new JLabel("Halo, " + currentPlayer.getUsername() + "!", SwingConstants.CENTER);
         lblHello.setFont(new Font("Arial", Font.BOLD, 20));
         lblHello.setForeground(new Color(100, 200, 255));
         gbc.gridx = 0; gbc.gridy = 0;
         root.add(lblHello, gbc);
 
-        // Info score
+        //info score
         JLabel lblScore = new JLabel(
                 "Score: " + currentPlayer.getScore() +
                         "  |  Menang: " + currentPlayer.getWins() +
