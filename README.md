@@ -72,3 +72,4 @@ Database used: MySQL
 <img width="423" height="512" alt="Screenshot 2026-06-26 120717" src="https://github.com/user-attachments/assets/7db46eee-63bc-4aca-9b93-e7d8cd4470f5" />
 
 ## Video Link
+https://youtu.be/uZbqD0cKjws
