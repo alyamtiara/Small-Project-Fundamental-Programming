@@ -18,10 +18,9 @@ public class TopScorersFrame extends JFrame {
             public boolean isCellEditable(int row, int col) { return false; }
         };
 
-        //Get Top 5 players from playerService
+        //dapatkan top 5 player dari PlayerService
         List<Player> topList = playerService.getTopFiveScorers();
 
-        //Add each player data into the table model
         for (Player p : topList) {
             model.addRow(new Object[]{
                     p.getUsername(),
@@ -31,8 +30,7 @@ public class TopScorersFrame extends JFrame {
                     p.getScore()
             });
         }
-
-        //buat tabel dan tambahkan ke scroll pane
+        
         table = new JTable(model);
         add(new JScrollPane(table));
 
